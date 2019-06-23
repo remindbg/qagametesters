@@ -6,7 +6,7 @@
 @section('content')
     <div class="card card-dashboard-four">
         <div class="card-header">
-            <h6 class="card-title">All Games</h6>
+            <h6 class="card-title">All Messages</h6>
         </div><!-- card-header -->
         <div class="card-body row">
             <div class="col-md-12">
@@ -18,6 +18,8 @@
                             <th>Name</th>
                             <th>date</th>
                             <th>email</th>
+                            <th>View</th>
+                            <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                         </thead>
@@ -28,6 +30,12 @@
                                 <td>{{$message->author}}</td>
                                 <td>{{$message->created_at}}</td>
                                 <td>{{$message->email}}</td>
+                                <td>
+                                    <button class="btn btn-success"><a href="{{route('messages.show',$message->id)}}">View</a></button>
+                                </td>
+                                <td>
+                                    <button class="btn btn-info"><a href="{{route('messages.edit',$message->id)}}">Edit</a></button>
+                                </td>
                                 <td>
                                     <form action="{{route('messages.destroy',$message->id)}}" method="POST">
                                         @csrf

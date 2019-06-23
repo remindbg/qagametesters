@@ -20,6 +20,6 @@ class AdminCheck
             return $next($request);
         }
 
-        return redirect('/')->with('message','Corporate Login Failed - Regular users not allowed');
+        return redirect('/')->with('message','Corporate Login Failed - Regular users not allowed.');
     }
 }

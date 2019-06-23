@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Message;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -14,7 +15,10 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::all();
+        return view('admin.messages.index',compact('messages'));
+
+
     }
 
     /**
@@ -24,7 +28,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        //
+      // no create since we dont need to create new  Messages anyway - they are created in the 'front' end from the regular users
     }
 
     /**
@@ -46,7 +50,8 @@ class MessageController extends Controller
      */
     public function show($id)
     {
-        //
+        $message = Message::find($id);
+        return view('admin.messages.single',compact('message'));
     }
 
     /**
