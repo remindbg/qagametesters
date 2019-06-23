@@ -45,7 +45,7 @@ Route::get('portal/profile', function () {
 
 Route::resource('corporate/games','admin\GameController');
 Route::resource('corporate/messages','admin\MessageController');
-
+Route::resource('corporate/users','admin\UserController');
 
 Auth::routes();
 
