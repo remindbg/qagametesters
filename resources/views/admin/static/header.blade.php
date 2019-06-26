@@ -92,7 +92,8 @@
             <li class="nav-item">
                 <a href="" class="nav-link with-sub"><i class="typcn typcn-user-add"></i>Users</a>
                 <nav class="nav-sub">
-                    <a href="/games/battle-royale" class="nav-sub-link">All Users</a>
+                    <a href="{{route('users.index')}}" class="nav-sub-link">All Users</a>
+
                 </nav>
             </li>
         </ul>

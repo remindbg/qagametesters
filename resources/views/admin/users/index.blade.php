@@ -18,7 +18,7 @@
                             <th>name</th>
                             <th>date registered</th>
                             <th>email</th>
-                            <th>View</th>
+                            <th>Active?</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -30,7 +30,7 @@
                                 <td>{{$user->name}}</td>
                                 <td>{{$user->created_at}}</td>
                                 <td>{{$user->email}}</td>
-
+                                <td>@if($user->active)yes @else no @endif</td>
                             </tr>
                         @endforeach
                         </tbody>

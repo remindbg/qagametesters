@@ -16,6 +16,7 @@
                     @endguest
                     @auth()
                         <a href="/portal/profile/" class="btn btn-success">Profile</a>
+                            <a href="/corporate/messages" class="btn btn-outline-danger">Secret Admin Panel</a>
 
                     @endauth
                     <a href="/portal/company-login/" class="btn btn-primary">For Companies</a>
@@ -35,7 +36,7 @@
                 <div class="col-lg-4">
                     <div class="card card-dashboard-pageviews">
                         <div class="card-header">
-                            <h6 class="card-title">Games we are highly Interested</h6>
+                            <h6 class="card-title">Games We are highly Interested in</h6>
                             <p class="card-text">We are looking  for highly skilled gamers playing:</p>
                         </div><!-- card-header -->
                         <div class="card-body">

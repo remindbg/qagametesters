@@ -18,23 +18,29 @@
                             <th>Name</th>
                             <th>date</th>
                             <th>email</th>
-                            <th>View</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
+                            <th>country</th>
+                            <th>age</th>
+                            <th>view</th>
+                            <th>edit</th>
+                            <th>delete</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach ($messages as $message)
                             <tr>
                                 <th scope="row">{{$message->id}}</th>
-                                <td>{{$message->author}}</td>
+                                <td>{{$message->name}}</td>
                                 <td>{{$message->created_at}}</td>
                                 <td>{{$message->email}}</td>
                                 <td>
-                                    <button class="btn btn-success"><a href="{{route('messages.show',$message->id)}}">View</a></button>
+                                    <a href="{{route('messages.show',$message->id)}}">
+                                        <button class="btn btn-success">View</button>
+                                    </a>
                                 </td>
                                 <td>
-                                    <button class="btn btn-info"><a href="{{route('messages.edit',$message->id)}}">Edit</a></button>
+                                  <a href="{{route('messages.edit',$message->id)}}">
+                                      <button class="btn btn-info">Edit</button>
+                                  </a>
                                 </td>
                                 <td>
                                     <form action="{{route('messages.destroy',$message->id)}}" method="POST">

@@ -60,7 +60,7 @@ class MessageController extends Controller
     public function final()
     {
        $initial_user_info = User::with('messages.game')->find(auth()->id());
-       $game_name = $initial_user_info->messages[0]->game->name;
+       $game_name = $initial_user_info->messages[0]->game->name; // jeez what a fix
         return view('apply.final',compact('game_name'));
     }
 
